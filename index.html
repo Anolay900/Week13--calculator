@@ -14,11 +14,22 @@
 </head>
 
 <body>
-    <div class="container calculator">
-        <button type="button" class="btn btn-success p-5 m-2" onclick="sum()">+</button>
-        <button type="button" class="btn btn-danger p-5 m-2" onclick="sub()">-</button>
-        <button type="button" class="btn btn-primary p-5 m-2" onclick="mult()">*</button>
-        <button type="button" class="btn btn-warning p-5 m-2" onclick="division()">/</button>
+    <div class="container">
+        <form class="calculator">
+            <div class="input-group input-group-lg text num">
+                <input type="text" id="numberOne" class="form-control" aria-label="Large"
+                    aria-describedby="inputGroup-sizing-sm" placeholder="Число 1">
+                <input type="text" id="numberTwo" class="form-control ml-1" aria-label="Large"
+                    aria-describedby="inputGroup-sizing-sm" placeholder="Число 2">
+            </div>
+            <button type="button" class="btn btn-success p-5 m-2 sign" onclick="sum()">+</button>
+            <button type="button" class="btn btn-danger p-5 m-2 sign" onclick="sub()">-</button>
+            <button type="button" class="btn btn-primary p-5 m-2 sign" onclick="mult()">*</button>
+            <button type="button" class="btn btn-warning p-5 m-2 sign" onclick="division()">/</button>
+            <div class="result" id="outcome"></div>
+            <button type="reset" class="btn btn-danger btn-lg btn-block mt-4 cleaner"
+                onclick="cleaning()">Стереть</button>
+        </form>
     </div>
 
     <script src="assets/js/index.js"></script>
